@@ -1,0 +1,53 @@
+body {
+  height: 97vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: green;
+  font-family: system-ui, -apple-system;
+  font-size: 40px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.grid {
+  height: 800px;
+  display: grid;
+  width: 800px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-left: 2rem;
+}
+
+.hole {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(68, 16, 16);
+  border-radius: 50%;
+  box-shadow: 0 10px 0 7px rgb(27, 26, 26);
+  position: relative;
+  overflow: hidden;
+}
+
+.hole .mole {
+  width: 65%;
+  left: 55%;
+  transform: translateX(-50%);
+  bottom: 0;
+  position: absolute;
+  animation: upward 0.2s ease-out;
+}
+
+@keyframes upward {
+  0% {
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
